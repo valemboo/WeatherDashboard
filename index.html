@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gidole&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <!-- fecha y hora-->
+        <div id="date-hour"></div> 
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="cityInput" 
+                placeholder="Buscar una ciudad"
+            >
+            <span class="material-icons" id="searchBtn">search</span>
+        </div>
+        <!-- Toggle Modo Dark/Light -->
+        <div id="theme-toggle-wrapper">
+            <label class="ui-switch">
+                <input type="checkbox" id="theme-checkbox">
+                <div class="slider">
+                    <div class="circle"></div>
+                </div>
+            </label>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <!-- CURRENT WEATHER -->
+        <section class="current-weather">
+            <h1 id="cityName">City Name</h1>
+            <div class="weather-info">
+                <span class="material-icons weather-icon-large" id="weatherIcon">sunny</span>
+                <div class="info-text">
+                    <h2 id="temperature">--°C</h2>
+                    <p id="description">Descripcion</p>
+                    <p>Humedad: <span id="humidity">--%</span></p>
+                    <p>Viento: <span id="wind">-- km/h</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORECAST -->
+        <section class="forecast" id="forecastContainer">
+            <!-- Tarjetad de Pronóstico -->
+        </section>
+
+    </main>
+    <script src="JS/weather.js"></script>
+    <script src="JS/app.js"></script>
+</body>
+</html>
